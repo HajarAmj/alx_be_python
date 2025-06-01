@@ -14,8 +14,12 @@ match priority:
         reminder_message = f"{task} is a task"
 
 if time_bound == "yes":
-    reminder_message += " that requires immediate attention today!"
+        reminder = f"Reminder: {base_message} that requires immediate attention today!"
+    else:
+        reminder = f"Note: {base_message}. Consider completing it when you have free time."
+    print("\n" + reminder)
 
-print(f"\nReminder: {reminder_message}")
+if __name__ == "__main__":
+    main()
 
 
