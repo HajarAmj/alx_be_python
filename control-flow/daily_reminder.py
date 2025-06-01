@@ -12,7 +12,7 @@ match priority.lower():
     case _:
         message = f"Reminder: {task} [Unknown Priority]"
 
-if time_bound.lower() =="yes":
-    message += "that requires immediate attention today!"
+if time_bound.lower() == "yes":
+    message += " that requires immediate attention today!"
 
 print(message)
