@@ -1,6 +1,6 @@
 class Calculator:
     # Class attribute
-    operation_type = "Arithmetic Operations"
+    calculation_type = "Arithmetic Operations"  # Changed from operation_type to calculation_type
 
     @staticmethod
     def add(a: float, b: float) -> float:
@@ -10,5 +10,6 @@ class Calculator:
     @classmethod
     def multiply(cls, a: float, b: float) -> float:
         """Class method to multiply two numbers and access class attributes"""
-        print(f"Calculation type: {cls.operation_type}")
+        # Include the exact phrase "Calculation type" in the output
+        print(f"Calculation type: {cls.calculation_type}")
         return a * b
