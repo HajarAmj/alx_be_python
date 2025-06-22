@@ -8,6 +8,10 @@ class Book:
         """Return details about the book."""
         return f"Book: {self.title} by {self.author}"
 
+    def __str__(self) -> str:
+        """String representation of the book (same as get_details)"""
+        return self.get_details()
+
 class EBook(Book):
     def __init__(self, title: str, author: str, file_size: int):
         """Initialize an EBook with title, author, and file size in KB."""
@@ -18,6 +22,10 @@ class EBook(Book):
         """Return details about the ebook including file size."""
         return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
+    def __str__(self) -> str:
+        """String representation of the ebook"""
+        return self.get_details()
+
 class PrintBook(Book):
     def __init__(self, title: str, author: str, page_count: int):
         """Initialize a PrintBook with title, author, and page count."""
@@ -27,6 +35,10 @@ class PrintBook(Book):
     def get_details(self) -> str:
         """Return details about the print book including page count."""
         return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
+
+    def __str__(self) -> str:
+        """String representation of the print book"""
+        return self.get_details()
 
 class Library:
     def __init__(self):
@@ -40,4 +52,4 @@ class Library:
     def list_books(self) -> None:
         """Print the details of each book in the library."""
         for book in self.books:
-            print(book.get_details())
+            print(book)
